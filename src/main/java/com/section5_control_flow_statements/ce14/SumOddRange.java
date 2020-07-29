@@ -15,10 +15,6 @@ public class SumOddRange {
 		sumOdd(1, 11);
 	}
 
-	private SumOddRange() {
-		throw new IllegalStateException("SumOddRange class");
-	}
-
 	public static boolean isOdd(int number) {
 		if (isNumberLessThanZero(number))
 			return FALSE;
