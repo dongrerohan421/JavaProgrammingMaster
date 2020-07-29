@@ -53,6 +53,7 @@ class SumOddRangeTest {
 		assertEquals(expected, actual);
 	}
 
+	@SuppressWarnings("static-access")
 	@Test
 	void testIsStartAndEndGreaterThanZero() {
 		int start = 4;
@@ -63,6 +64,7 @@ class SumOddRangeTest {
 		assertEquals(expected, actual);
 	}
 
+	@SuppressWarnings("static-access")
 	@Test
 	void testIsEndGreaterThanOrEqualToStart() {
 		int start = 4;
