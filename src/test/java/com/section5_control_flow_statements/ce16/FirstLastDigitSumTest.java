@@ -13,10 +13,29 @@ public class FirstLastDigitSumTest {
         firstLastDigitSum = new FirstLastDigitSum();
     }
 
+    @SuppressWarnings("static-access")
     @Test
     void sumFirstAndLastDigitTest() {
         int expected = 4;
-        int actual = firstLastDigitSum.sumFirstLastDigitSum(252);
+        int actual = firstLastDigitSum.sumFirstAndLastDigit(252);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @SuppressWarnings("static-access")
+    @Test
+    void findTotalDigitsTestReturnNegative() {
+        int expected = -1;
+        int actual = firstLastDigitSum.sumFirstAndLastDigit(-10);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @SuppressWarnings("static-access")
+    @Test
+    void findTotalDigitsTestReturnZero() {
+        int expected = 0;
+        int actual = firstLastDigitSum.sumFirstAndLastDigit(0);
 
         Assertions.assertEquals(expected, actual);
     }
