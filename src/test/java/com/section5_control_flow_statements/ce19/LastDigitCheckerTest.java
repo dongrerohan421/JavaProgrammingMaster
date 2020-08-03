@@ -29,6 +29,15 @@ public class LastDigitCheckerTest {
 
     @SuppressWarnings("static-access")
     @Test
+    public void hasNotSameLastDigitWithinRangeTest() {
+        boolean expected = true;
+        boolean actual = lastDigitChecker.hasSameLastDigit(22, 23, 34);
+
+        Assertions.assertNotEquals(expected, actual);
+    }
+
+    @SuppressWarnings("static-access")
+    @Test
     public void hasSameLastDigitNotWithinRangeTest() {
         boolean expected = true;
         boolean actual = lastDigitChecker.hasSameLastDigit(9, 99, 999);
