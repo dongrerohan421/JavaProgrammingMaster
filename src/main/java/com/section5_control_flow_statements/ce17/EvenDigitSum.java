@@ -4,6 +4,7 @@ public class EvenDigitSum {
     public static void main(String[] args) {
         getEvenDigitSum(252);
         getEvenDigitSum(123456789);
+        getEvenDigitSum(-22);
     }
 
     public static int getEvenDigitSum(int number) {
