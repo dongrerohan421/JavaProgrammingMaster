@@ -56,11 +56,11 @@ public class LastDigitCheckerTest {
         boolean expected = true;
         boolean actual = lastDigitChecker.isValid(9);
 
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertNotEquals(expected, actual);
 
         expected = true;
         actual = lastDigitChecker.isValid(1051);
 
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertNotEquals(expected, actual);
     }
 }
