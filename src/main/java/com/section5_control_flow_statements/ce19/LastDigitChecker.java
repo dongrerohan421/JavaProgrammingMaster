@@ -18,14 +18,10 @@ public class LastDigitChecker {
         }
 
         int mod1 = firstNum % 10;
-        int num1 = firstNum /= 10;
         int mod2 = secondNum % 10;
-        int num2 = secondNum / 10;
         int mod3 = thirdNum % 10;
-        int num3 = thirdNum / 10;
 
-        return num1 == num2 || num1 == num3 || num2 == num3 || num1 == mod2 || num1 == mod3 || num2 == mod1
-                || num2 == mod3 || num3 == mod1 || num3 == mod2 || mod1 == mod2 || mod1 == mod3 || mod2 == mod3;
+        return mod1 == mod2 || mod1 == mod3 || mod2 == mod3;
     }
 
     public static boolean isValid(int num) {
