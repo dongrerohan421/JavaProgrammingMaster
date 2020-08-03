@@ -5,6 +5,10 @@ public class LastDigitChecker {
         hasSameLastDigit(41, 22, 71);
         hasSameLastDigit(23, 32, 42);
         hasSameLastDigit(9, 99, 999);
+
+        isValid(10);
+        isValid(468);
+        isValid(1051);
     }
 
     public static boolean hasSameLastDigit(int firstNum, int secondNum, int thirdNum) {
@@ -22,6 +26,10 @@ public class LastDigitChecker {
 
         return num1 == num2 || num1 == num3 || num2 == num3 || num1 == mod2 || num1 == mod3 || num2 == mod1
                 || num2 == mod3 || num3 == mod1 || num3 == mod2 || mod1 == mod2 || mod1 == mod3 || mod2 == mod3;
+    }
+
+    public static boolean isValid(int num) {
+        return num >= 10 || num <= 1000;
     }
 
 }
