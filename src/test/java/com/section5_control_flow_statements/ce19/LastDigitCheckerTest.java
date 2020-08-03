@@ -35,4 +35,32 @@ public class LastDigitCheckerTest {
 
         Assertions.assertNotEquals(expected, actual);
     }
+
+    @SuppressWarnings("static-access")
+    @Test
+    public void isValidWithinRangeTest() {
+        boolean expected = true;
+        boolean actual = lastDigitChecker.isValid(10);
+
+        Assertions.assertEquals(expected, actual);
+
+        expected = true;
+        actual = lastDigitChecker.isValid(468);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @SuppressWarnings("static-access")
+    @Test
+    public void isValidNotWithinRangeTest() {
+        boolean expected = true;
+        boolean actual = lastDigitChecker.isValid(9);
+
+        Assertions.assertEquals(expected, actual);
+
+        expected = true;
+        actual = lastDigitChecker.isValid(1051);
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
