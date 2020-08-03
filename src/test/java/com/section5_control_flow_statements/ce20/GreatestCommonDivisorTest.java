@@ -27,6 +27,10 @@ public class GreatestCommonDivisorTest {
         expected = 9;
         actual = greatestCommonDivisor.getGreatestCommonDivisor(81, 153);
         Assertions.assertEquals(expected, actual);
+
+        expected = 10;
+        actual = greatestCommonDivisor.getGreatestCommonDivisor(1010, 10);
+        Assertions.assertEquals(expected, actual);
     }
 
     @SuppressWarnings("static-access")

@@ -12,7 +12,7 @@ public class GreatestCommonDivisor {
         if (firstNum < 10 || secondNum < 10)
             return -1;
 
-        int upto = firstNum < secondNum ? firstNum : secondNum;
+        int upto = firstNum >= secondNum ? firstNum : secondNum;
         int gcd = -1;
 
         for (int i = 1; i < upto; i++) {
