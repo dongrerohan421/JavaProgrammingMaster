@@ -1,6 +1,5 @@
 package com.section6_classes_constructors_inheritance.ce29;
 
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
