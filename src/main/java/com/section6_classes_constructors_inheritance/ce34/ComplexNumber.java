@@ -2,8 +2,8 @@ package com.section6_classes_constructors_inheritance.ce34;
 
 public class ComplexNumber {
 
-    double real;
-    double imaginary;
+    private double real;
+    private double imaginary;
 
     public ComplexNumber() {
     }
