@@ -20,4 +20,12 @@ public class CalculatorTest {
         double actual = calculator.getTotalCost();
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testGetTotalCostReturnZero() {
+        double expected = 0;
+        calculator = new Calculator(new Floor(-5.4, 4.5), new Carpet(1.5));
+        double actual = calculator.getTotalCost();
+        assertEquals(expected, actual);
+    }
 }
