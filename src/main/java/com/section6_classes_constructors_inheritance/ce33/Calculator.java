@@ -2,8 +2,8 @@ package com.section6_classes_constructors_inheritance.ce33;
 
 public class Calculator {
 
-    Floor floor;
-    Carpet carpet;
+    private Floor floor;
+    private Carpet carpet;
 
     public Calculator() {
     }

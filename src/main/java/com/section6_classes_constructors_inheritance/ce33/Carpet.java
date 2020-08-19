@@ -2,7 +2,7 @@ package com.section6_classes_constructors_inheritance.ce33;
 
 public class Carpet {
 
-    double cost;
+    private double cost;
 
     public Carpet() {
     }

@@ -2,8 +2,8 @@ package com.section6_classes_constructors_inheritance.ce33;
 
 public class Floor {
 
-    double width;
-    double length;
+    private double width;
+    private double length;
 
     public Floor() {
     }
