@@ -3,7 +3,7 @@ The Swimming Company has asked you to write an application that calculates the v
 
 
 1. Write a class with the name **Rectangle**. The class needs two fields (instance variable) with name **width** and **length** both of type double.<br /><br />
-The class needs to have **one constructor with parameters width and length both of type double** and it needs to initialize the fields.<br />
+The class needs to have **one constructor with parameters width and length both of type double** and it needs to initialize the fields.<br /><br />
 In case the width parameter is less than 0 it needs to set the width field value to 0.<br /><br />
 In case the length parameter is less than 0 it needs to set the length field value to 0.<br /><br />
 Write the following methods (instance methods):
