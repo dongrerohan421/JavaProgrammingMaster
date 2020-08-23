@@ -2,8 +2,8 @@ package com.section6_classes_constructors_inheritance.ce36;
 
 public class Rectangle {
 
-    double width;
-    double length;
+    private double width;
+    private double length;
 
     public Rectangle(double width, double length) {
         this.width = (width < 0 ? 0 : width);
