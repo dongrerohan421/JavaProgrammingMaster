@@ -1,15 +1,7 @@
 # JavaProgrammingMaster 
 
-![Build Status](https://github.com/dongrerohan421/JavaProgrammingMaster/actions/checkout/workflows/.github/workflows/gradle.yml/badge.svg)
+![Java CI with Gradle](https://github.com/dongrerohan421/JavaProgrammingMaster/workflows/Java%20CI%20with%20Gradle/badge.svg)
 
-![Setup Java](https://github.com/dongrerohan421/JavaProgrammingMaster/actions/setup-java/workflows/.github/workflows/gradle.yml/badge.svg)
-
-![Gradle Cache](https://github.com/dongrerohan421/JavaProgrammingMaster/actions/cache/workflows/.github/workflows/gradle.yml/badge.svg)
-
-![upload artifact](https://github.com/dongrerohan421/JavaProgrammingMaster/actions/upload-artifact/workflows/.github/workflows/gradle.yml/badge.svg)
-
-<!-- ![example workflow file path](https://github.com/actions/hello-world/workflows/.github/workflows/main.yml/badge.svg)
- -->
 This is Udemy course by Tim Buchalka [Java Programming Masterclass for Software Developers.](https://www.udemy.com/course/java-the-complete-java-developer-course/)
 
 You will find section wise all coding exercises in this repository.
