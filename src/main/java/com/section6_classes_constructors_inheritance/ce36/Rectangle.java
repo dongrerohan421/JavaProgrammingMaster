@@ -10,9 +10,6 @@ public class Rectangle {
         this.length = (length < 0 ? 0 : length);
     }
 
-    public Rectangle() {
-    }
-
     public double getWidth() {
         return width;
     }
