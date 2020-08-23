@@ -26,7 +26,7 @@ jobs:
 #         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
 #         restore-keys: ${{ runner.os }}-gradle
     - name: Build with Gradle
-      run: ./gradlew bui
+      run: ./gradlew -b ci.gradle
     - uses: actions/upload-artifact@v2
       with:
         name: Package
