@@ -1,6 +1,6 @@
 # JavaProgrammingMaster 
 
-![Build Status](https://github.com/dongrerohan421/JavaProgrammingMaster/actions/workflows/Java%20CI%20with%20Gradle/badge.svg)
+![Build Status](https://github.com/dongrerohan421/JavaProgrammingMaster/workflows/Java%20CI%20with%20Gradle/badge.svg)
 
 This is Udemy course by Tim Buchalka [Java Programming Masterclass for Software Developers.](https://www.udemy.com/course/java-the-complete-java-developer-course/)
 
