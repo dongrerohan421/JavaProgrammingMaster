@@ -2,7 +2,7 @@ package com.section8_arrays_javainbuiltlists_autoboxing_unboxing.ce41;
 
 import java.util.Scanner;
 
-public class Arrays {
+public class SortArrays {
 
     static Scanner scanner = new Scanner(System.in);
 
@@ -13,6 +13,8 @@ public class Arrays {
 
         int[] myArray = getInteger(size);
         printArray(myArray);
+
+        sortIntegers(myArray);
     }
 
     public static int[] getInteger(int number) {
@@ -34,4 +36,23 @@ public class Arrays {
 
         return myArray;
     }
+
+    private static void sortIntegers(int[] myArray) {
+        int temp;
+        for (int i = 0; i < myArray.length; i++) {
+            for (int j = i + 1; j < myArray.length; j++) {
+                if (myArray[i] < myArray[j]) {
+                    temp = myArray[i];
+                    myArray[i] = myArray[j];
+                    myArray[j] = temp;
+                }
+            }
+        }
+
+        System.out.println("Sort Array elements in descending order::");
+        for (int i = 0; i < myArray.length; i++) {
+            System.out.println(myArray[i]);
+        }
+    }
+
 }
