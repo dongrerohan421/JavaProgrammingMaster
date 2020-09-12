@@ -1,6 +1,7 @@
 package com.section8_arrays_javainbuiltlists_autoboxing_unboxing.ce44;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -13,36 +14,39 @@ public class Main {
         mobilePhone.printMenu();
 
         boolean quit = false;
+        try {
+            while (!quit) {
+                System.out.println("Enter your option: ");
+                int option = scanner.nextInt();
+                scanner.nextLine();
 
-        while (!quit) {
-            System.out.println("Enter your option: ");
-            int option = scanner.nextInt();
-            scanner.nextLine();
-
-            switch (option) {
-                case 0:
-                    System.out.println("You've left the application!");
-                    quit = true;
-                    break;
-                case 1:
-                    mobilePhone.printContactList();
-                    break;
-                case 2:
-                    addNewContact();
-                    break;
-                case 3:
-                    updateContact();
-                    break;
-                case 4:
-                    removeContact();
-                    break;
-                case 5:
-                    findContact();
-                    break;
-                default:
-                    System.out.println("Invalid option!");
-                    break;
+                switch (option) {
+                    case 0:
+                        System.out.println("You've left the application!");
+                        quit = true;
+                        break;
+                    case 1:
+                        mobilePhone.printContactList();
+                        break;
+                    case 2:
+                        addNewContact();
+                        break;
+                    case 3:
+                        updateContact();
+                        break;
+                    case 4:
+                        removeContact();
+                        break;
+                    case 5:
+                        findContact();
+                        break;
+                    default:
+                        System.out.println("Invalid option!");
+                        break;
+                }
             }
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid option! -> Good Bye!");
         }
     }
 
