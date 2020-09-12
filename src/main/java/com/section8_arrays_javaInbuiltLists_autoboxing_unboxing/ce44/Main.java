@@ -46,7 +46,7 @@ public class Main {
                 }
             }
         } catch (InputMismatchException e) {
-            System.out.println("Invalid option! -> Good Bye!");
+            System.out.println("Invalid option! Please enter a number. -> Good Bye!");
         }
     }
 
@@ -65,33 +65,37 @@ public class Main {
         String existingName = scanner.nextLine();
         Contact oldContact = mobilePhone.findContact(existingName);
 
-        if (oldContact == null) {
+        if (oldContact != null) {
+            System.out.println("Enter new phone number: ");
+            String newPhoneNumber = scanner.nextLine();
+
+            Contact newContact = new Contact(existingName, newPhoneNumber);
+
+            mobilePhone.updateContact(oldContact, newContact);
+        } else {
             System.out.println("Contact not found");
         }
-
-        System.out.println(CONTACT_NAME);
-        String newName = scanner.nextLine();
-        System.out.println("Enter new phone number: ");
-        String newPhoneNumber = scanner.nextLine();
-
-        Contact newContact = new Contact(newName, newPhoneNumber);
-
-        mobilePhone.updateContact(oldContact, newContact);
     }
 
     public static void removeContact() {
         System.out.println(CONTACT_NAME);
         String name = scanner.nextLine();
         Contact deleteContact = mobilePhone.findContact(name);
-
-        mobilePhone.removeContact(deleteContact);
+        if (deleteContact != null) {
+            mobilePhone.removeContact(deleteContact);
+        } else {
+            System.out.println("Contact not found");
+        }
     }
 
     private static void findContact() {
         System.out.println(CONTACT_NAME);
         String name = scanner.nextLine();
-        mobilePhone.findContact(name);
-        System.out.println(name + " is in the list!");
+        if (mobilePhone.findContact(name) != null) {
+            System.out.println(name + " is in the list!");
+        } else {
+            System.out.println(name + " is not in the list!");
+        }
     }
 
 }

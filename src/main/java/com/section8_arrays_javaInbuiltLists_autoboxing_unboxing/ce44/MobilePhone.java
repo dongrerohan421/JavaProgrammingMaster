@@ -17,7 +17,7 @@ public class MobilePhone {
 
     // show contact list
     public void printContactList() {
-        for (Contact contact : contacts) {
+        for (Contact contact : this.contacts) {
             if (contacts.isEmpty()) {
                 System.out.println("Contact list is empty!");
             }
@@ -29,7 +29,7 @@ public class MobilePhone {
     // need to type in name and number to create Contact in parameter
     public boolean addContact(Contact contact) {
         if (!existingContact(contact)) {
-            contacts.add(contact);
+            this.contacts.add(contact);
             System.out.println("New contact added!");
             return TRUE;
         }
@@ -40,34 +40,37 @@ public class MobilePhone {
     // update - (boolean) replace oldOne with newOne
     // only if oldOne is an existing contact & newOne is not an existing Contact
     public boolean updateContact(Contact oldContact, Contact newContact) {
-        if (existingContact(oldContact) && !existingContact(newContact)) {
-            int position = findContact(oldContact);
-            contacts.set(position, newContact);
-            System.out.println("Update successful!");
-            return TRUE;
+        int position = findContact(oldContact);
+        if (position < 0) {
+            System.out.println(oldContact.getName() + " was not found!");
+            return FALSE;
         }
-        System.out.println("Error updating!");
-        return FALSE;
+        this.contacts.set(position, newContact);
+        System.out.println(oldContact.getName() + "\'s old phone number " + oldContact.getPhoneNumber()
+                + " was replaced with " + newContact.getPhoneNumber());
+        return TRUE;
     }
 
     // remove
     public boolean removeContact(Contact contact) {
-        if (contacts.remove(contact)) {
-            System.out.println("Deletion successful!");
-            return TRUE;
+        int foundPosition = findContact(contact);
+        if (foundPosition < 0) {
+            System.out.println(contact.getName() + " was not found!");
+            return FALSE;
         }
-        System.out.println("Error deleting!");
+        this.contacts.remove(foundPosition);
+        System.out.println(contact.getName() + " was deleted!");
         return FALSE;
     }
 
     // query - search by Contact and return boolean
     public boolean existingContact(Contact contact) {
-        return contacts.contains(contact) ? TRUE : FALSE;
+        return this.contacts.contains(contact) ? TRUE : FALSE;
     }
 
     // search by name and return position
     public boolean existingContact(String name) {
-        for (Contact contact : contacts) {
+        for (Contact contact : this.contacts) {
             if (contact.getName().equals(name)) {
                 return TRUE;
             }
@@ -78,7 +81,7 @@ public class MobilePhone {
     // search by Contact return position
     public int findContact(Contact contact) {
         if (existingContact(contact)) {
-            return contacts.indexOf(contact);
+            return this.contacts.indexOf(contact);
         }
         return -1;
     }
@@ -86,7 +89,7 @@ public class MobilePhone {
     // search by name and return contact
     public Contact findContact(String name) {
         if (existingContact(name)) {
-            for (Contact contact : contacts) {
+            for (Contact contact : this.contacts) {
                 if (contact.getName().equals(name)) {
                     return contact;
                 }
