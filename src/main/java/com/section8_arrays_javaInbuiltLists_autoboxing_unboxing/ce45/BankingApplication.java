@@ -1,7 +1,5 @@
 package com.section8_arrays_javainbuiltlists_autoboxing_unboxing.ce45;
 
-import java.util.Scanner;
-
 public class BankingApplication {
 
     private static final String CHARLOTTE_BRANCH = "Charlotte";
