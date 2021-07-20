@@ -1,6 +1,5 @@
 package com.section8_arrays_javainbuiltlists_autoboxing_unboxing.ce44;
 
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
